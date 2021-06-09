@@ -1490,6 +1490,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -1497,18 +1499,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+var Title = styled_components__WEBPACK_IMPORTED_MODULE_7___default.a.h1.withConfig({
+  displayName: "a__Title",
+  componentId: "qiil1x-0"
+})(["color:yellow;font-size:40px;"]);
 
 var A = function A(_ref) {
   var router = _ref.router,
       name = _ref.name;
   // console.log(router) ;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_4___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_4___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Title, null, "\u6211\u662F\u6807\u9898"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
     href: "#aaa"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("a", {
     className: "jsx-3453411719"
   }, "A", router.query.id, " ", name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_3___default.a, {
     id: "3453411719"
-  }, "a.jsx-3453411719{color:blue;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9saXdlaS9EZXNrdG9wL2NvZGUvbmV4dGpzLXByb2plY3QvcGFnZXMvYS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFVa0IsQUFHc0IsV0FDYiIsImZpbGUiOiIvVXNlcnMvbGl3ZWkvRGVza3RvcC9jb2RlL25leHRqcy1wcm9qZWN0L3BhZ2VzL2EuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB3aXRoUm91dGVyIH0gZnJvbSAnbmV4dC9yb3V0ZXInXG5pbXBvcnQgTGluayBmcm9tICduZXh0L2xpbmsnO1xuXG5jb25zdCBBID0gKHsgcm91dGVyLCBuYW1lIH0pID0+IHtcbiAgLy8gY29uc29sZS5sb2cocm91dGVyKSA7XG4gIHJldHVybiAoXG4gICAgPD5cbiAgICAgIDxMaW5rIGhyZWY9XCIjYWFhXCI+XG4gICAgICAgIDxhPkF7cm91dGVyLnF1ZXJ5LmlkfSB7bmFtZX08L2E+XG4gICAgICA8L0xpbms+XG4gICAgICA8c3R5bGUganN4PntgXG4gICAgICAgIGEge1xuICAgICAgICAgIGNvbG9yOiBibHVlO1xuICAgICAgICB9ICAgICAgICBcbiAgICAgIGB9XG4gICAgICA8L3N0eWxlPlxuICAgIDwvPlxuICApXG59XG5cbi8vIEEuZ2V0SW5pdGlhbFByb3BzID0gKCkgPT4ge1xuLy8gICByZXR1cm4ge1xuLy8gICAgIG5hbWU6ICdsaXdlaSdcbi8vICAgfVxuLy8gfVxuXG5BLmdldEluaXRpYWxQcm9wcyA9IGFzeW5jIChjdHgpID0+IHtcbiAgY29uc3QgcHJvbWlzZSA9IG5ldyBQcm9taXNlKChyZXNvbHZlKSA9PiB7XG4gICAgc2V0VGltZW91dCgoKSA9PiB7XG4gICAgICByZXNvbHZlKHtcbiAgICAgICAgbmFtZTogJ3Zvbm1vJ1xuICAgICAgfSlcbiAgICB9LCAxMDAwKTtcbiAgfSlcbiAgcmV0dXJuIHByb21pc2U7XG59XG5cbmV4cG9ydCBkZWZhdWx0IHdpdGhSb3V0ZXIoQSk7Il19 */\n/*@ sourceURL=/Users/liwei/Desktop/code/nextjs-project/pages/a.js */"));
+  }, "a.jsx-3453411719{color:blue;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9saXdlaS9EZXNrdG9wL2NvZGUvbmV4dGpzLXByb2plY3QvcGFnZXMvYS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFpQmtCLEFBR3NCLFdBQ2IiLCJmaWxlIjoiL1VzZXJzL2xpd2VpL0Rlc2t0b3AvY29kZS9uZXh0anMtcHJvamVjdC9wYWdlcy9hLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgd2l0aFJvdXRlciB9IGZyb20gJ25leHQvcm91dGVyJ1xuaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJztcbmltcG9ydCBzdHlsZWQgZnJvbSBcInN0eWxlZC1jb21wb25lbnRzXCI7XG5cbmNvbnN0IFRpdGxlID0gc3R5bGVkLmgxYFxuICBjb2xvcjogeWVsbG93O1xuICBmb250LXNpemU6IDQwcHg7XG5gXG5cbmNvbnN0IEEgPSAoeyByb3V0ZXIsIG5hbWUgfSkgPT4ge1xuICAvLyBjb25zb2xlLmxvZyhyb3V0ZXIpIDtcbiAgcmV0dXJuIChcbiAgICA8PlxuICAgICAgPFRpdGxlPuaIkeaYr+agh+mimDwvVGl0bGU+XG4gICAgICA8TGluayBocmVmPVwiI2FhYVwiPlxuICAgICAgICA8YT5Be3JvdXRlci5xdWVyeS5pZH0ge25hbWV9PC9hPlxuICAgICAgPC9MaW5rPlxuICAgICAgPHN0eWxlIGpzeD57YFxuICAgICAgICBhIHtcbiAgICAgICAgICBjb2xvcjogYmx1ZTtcbiAgICAgICAgfSAgICAgICAgXG4gICAgICBgfVxuICAgICAgPC9zdHlsZT5cbiAgICA8Lz5cbiAgKVxufVxuXG4vLyBBLmdldEluaXRpYWxQcm9wcyA9ICgpID0+IHtcbi8vICAgcmV0dXJuIHtcbi8vICAgICBuYW1lOiAnbGl3ZWknXG4vLyAgIH1cbi8vIH1cblxuQS5nZXRJbml0aWFsUHJvcHMgPSBhc3luYyAoY3R4KSA9PiB7XG4gIGNvbnN0IHByb21pc2UgPSBuZXcgUHJvbWlzZSgocmVzb2x2ZSkgPT4ge1xuICAgIHNldFRpbWVvdXQoKCkgPT4ge1xuICAgICAgcmVzb2x2ZSh7XG4gICAgICAgIG5hbWU6ICd2b25tbydcbiAgICAgIH0pXG4gICAgfSwgMTAwMCk7XG4gIH0pXG4gIHJldHVybiBwcm9taXNlO1xufVxuXG5leHBvcnQgZGVmYXVsdCB3aXRoUm91dGVyKEEpOyJdfQ== */\n/*@ sourceURL=/Users/liwei/Desktop/code/nextjs-project/pages/a.js */"));
 }; // A.getInitialProps = () => {
 //   return {
 //     name: 'liwei'
@@ -1712,6 +1719,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("regenerator-runtime");
+
+/***/ }),
+
+/***/ "styled-components":
+/*!************************************!*\
+  !*** external "styled-components" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
 
 /***/ }),
 

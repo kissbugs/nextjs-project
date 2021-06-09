@@ -5,6 +5,7 @@
  * 一般用来配合第三方 css-in-js 方案使用
  */
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 
 // HOC
 const withLog = (Comp) => {
@@ -15,17 +16,27 @@ const withLog = (Comp) => {
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
+    const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage;
-    
-    ctx.renderPage = () => originalRenderPage({
-      enhanceApp: App => App,
-      enhanceComponent: Component => Component
-    })
-
-    const initialProps = await Document.getInitialProps(ctx)
-
-    return {
-      ...initialProps
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          // 在sheet上挂载了 渲染了整个App的样式代码都会被挂载到sheet上
+          enhanceApp: App => (props) => sheet.collectStyles(<App {...props} />),
+          // enhanceComponent: Component => withLog(Component)
+        })
+      const props = await Document.getInitialProps(ctx)
+      return {
+        ...props,
+        styles: (
+          <>
+            {props.styles}
+            {sheet.getStyleElement()}
+          </>
+        )
+      }
+    } finally {
+      sheet.seal();
     }
   }
 
@@ -35,7 +46,7 @@ class MyDocument extends Document {
         <Head />
         <body>
           <Main />
-          <NextScript /> 
+          <NextScript />
         </body>
       </Html>
     )
