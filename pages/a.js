@@ -1,10 +1,13 @@
 import { withRouter } from 'next/router'
+import getConfig from 'next/config';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import styled from "styled-components";
 // import moment from "moment";
 
 const Comp = dynamic(import('../components/Comp'))
+
+const { serverRuntimeConfig, publicRuntimeConfig } = getConfig();
 
 const Title = styled.h1`
   color: #49c114;
@@ -13,6 +16,7 @@ const Title = styled.h1`
 
 const A = ({ router, name, time }) => {
   // console.log(router) ;
+  console.log(serverRuntimeConfig, publicRuntimeConfig);
   return (
     <>
       <Title>我是标题 {time}</Title>
