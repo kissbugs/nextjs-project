@@ -50,7 +50,7 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(ReduxThunk))
 );
 
-function add(num) {
+export function add(num) {
   return {
     type: ADD,
     num,

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Router from 'next/router';
 import { Button } from 'antd';
 import { connect } from 'react-redux';
-import store from "../store/store";
+import { add } from "../store/store"
 
 
 const events = [
@@ -51,6 +51,12 @@ const Index = ({ counter, username, add, rename }) => {
     </>
   )
 }
+
+Index.getInitialProps = async ({ reduxStore }) => {
+  reduxStore.dispatch(add(3))
+  return {}
+}
+
 export default connect(function mapStateToProps(state) {
   return {
     counter: state.counter.count,

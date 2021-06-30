@@ -1,11 +1,16 @@
 import App, { Container } from 'next/app';
 import 'antd/dist/antd.css';
 import Layout from '../components/Layout';
+import MyContext from "../lib/my-context";
 import { Provider } from 'react-redux'
-import store from "../store/store"
+import testHoc from "../lib/with-redux"
 
 class MyApp extends App {
-  static async getInitialProps({ Component, ctx }) {
+  state = {
+    context: 'value',
+  }
+  static async getInitialProps(ctx) {
+    const { Component } = ctx;
     console.log("app init");
     let pageProps = {};
     if (Component.getInitialProps) {
@@ -14,12 +19,16 @@ class MyApp extends App {
     return { pageProps }
   }
   render() {
-    const { Component, pageProps } = this.props;
+    console.log("=====render", this.props);
+    
+    const { Component, pageProps, reduxStore } = this.props;
     return (
       <Container>
         <Layout>
-          <Provider store={store}>
-            <Component {...pageProps} />
+          <Provider store={reduxStore}>
+            <MyContext.Provider value={this.state.context}>
+              <Component {...pageProps} />
+            </MyContext.Provider>
           </Provider>
         </Layout>
       </Container>
@@ -27,4 +36,4 @@ class MyApp extends App {
   }
 }
 
-export default MyApp;
+export default testHoc(MyApp);
